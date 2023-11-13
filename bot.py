@@ -14,7 +14,7 @@ import re
 
 
 # Токен бота в Телеграме
-telegram_token = open('telegrm.token', 'r').read().strip()
+telegram_token = open('telegram.token', 'r').read().strip()
 
 # Токен группы ВКонтакте
 vk_token = open('vk.token', 'r').read().strip()
