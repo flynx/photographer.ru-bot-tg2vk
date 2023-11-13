@@ -6,7 +6,7 @@ After=multi-user.target
 Type=simple
 User=andrey
 Restart=always
-ExecStart=/usr/bin/python3 /home/andrey/bot-test/bot.py
+ExecStart=/usr/bin/python3 /home/andrey/bot-tg2vk-runtime/bot.py
 
 [Install]
 WantedBy=multi-user.target
