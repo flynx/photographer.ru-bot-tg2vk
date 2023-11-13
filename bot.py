@@ -8,19 +8,22 @@
 import telebot
 import vk_api
 import requests
+import os
 import io
 import datetime
 import re
 
+BASE_PATH = os.path.dirname(
+    os.path.abspath(__file__))
 
 # Токен бота в Телеграме
-telegram_token = open('telegram.token', 'r').read().strip()
+telegram_token = open(os.path.join(BASE_PATH, 'telegram.token'), 'r').read().strip()
 
 # Токен группы ВКонтакте
-vk_token = open('vk.token', 'r').read().strip()
+vk_token = open(os.path.join(BASE_PATH,'vk.token'), 'r').read().strip()
 
 # ID группы ВКонтакте
-vk_group_id = open('vk_group.id', 'r').read().strip()
+vk_group_id = open(os.path.join(BASE_PATH,'vk_group.id'), 'r').read().strip()
 
 
 def getDate():
