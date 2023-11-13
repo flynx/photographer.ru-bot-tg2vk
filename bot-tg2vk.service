@@ -1,0 +1,12 @@
+[Unit]
+Description=Photographer.ru telegram to VK repost bot
+After=multi-user.target
+
+[Service]
+Type=simple
+User=andrey
+Restart=always
+ExecStart=/usr/bin/python3 /home/andrey/bot-test/bot.py
+
+[Install]
+WantedBy=multi-user.target
