@@ -26,7 +26,7 @@ import re
 def html2md(text):
 	text = re.sub(r'<b>(.*)</b>', r'*\1*', text, flags=re.I|re.M)
 	text = re.sub(r'<i>(.*)</i>', r'_\1_', text, flags=re.I|re.M)
-	text = re.sub(r'<a\s+[ˆ>]*href="(.*)"[ˆ>]*>(.*)</a>', r'[\2](\1)', text, flags=re.I|re.M)
+	text = re.sub(r'<a\s+[^>]*href="(.*)"[^>]*>(.*)</a>', r'[\2](\1)', text, flags=re.I|re.M)
 	return text
 
 def load(name):
